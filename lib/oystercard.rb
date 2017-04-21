@@ -11,4 +11,8 @@ MAX_LIMIT = 90
     @balance += value
   end
 
+  def deduct(fare)
+      @balance -= fare
+  end
+
 end
