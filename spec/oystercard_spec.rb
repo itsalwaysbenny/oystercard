@@ -15,4 +15,10 @@ describe Oystercard do
     end
   end
   end
+
+describe 'Cannot top up more than £90'
+  it "raises" do
+    value = 95
+    expect { card.top_up(Oystercard::MAX_LIMIT+1) }.to raise_error 'Cannot top up more than £90'
+  end
 end
